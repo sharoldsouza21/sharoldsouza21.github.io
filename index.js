@@ -23,7 +23,7 @@ var docList = [
     var linkText = document.createTextNode("View Doctor");
     link.appendChild(linkText);
     link.setAttribute("onClick","viewDoctor(id)");
-    link.setAttribute("href","viewDoctor.php?id="+i);
+    link.setAttribute("href","viewDoctor.html?id="+i);
     link.setAttribute("id",i);
     link.setAttribute("class","view");
     cell.appendChild(link);
