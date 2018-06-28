@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+     <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            FindMyDoctor
+        </a>
+    </nav>
+    <div class="about">
+       <h1> Find your doctors online.View available times and locations.</h1>
+       <br/>
+       <p>Sed mattis libero nibh, eget interdum quam vestibulum vel. Cras arcu enim, efficitur a lacus at, aliquam cursus purus. Praesent leo odio, pulvinar ut auctor ut, varius eget risus. Nam posuere metus nunc, vel bibendum metus scelerisque ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tempor elit felis, et tempor nibh fringilla sed. Suspendisse tristique vehicula ex, id mattis urna iaculis id. Donec ut bibendum felis. Integer gravida sodales rutrum. Aliquam vehicula accumsan mattis. Etiam eget ex nulla. Nunc odio enim, fringilla eget euismod sed, elem</p>
+    </div>
+ <div class="search-list">  
+        <div class="filtnsearch">
+                <div class="filt row">
+                  <div class="col-sm-8">
+                   <input type="text" id="fil" class="form-control form-control" placeholder="Enter Name, State or Speciality...">
+                 </div>
+                 <div class="col-sm-4">
+                   <button type="button" class="btn btn-info" onclick="addFilter()" >Quick Search</button>
+                 </div>
+                </div> 
+                <div class="row">
+                 <ul id="filterList"></ul>
+                
+                </div>
+               </div> 
+ <div id="tableDiv">
+     <table id ="tab">
+         <thead>
+            <tr>
+                <td>Name</td>
+                <td>Speciality</td>
+                <td>Location</td>
+                <td>State</td>
+                <td>Address</td>
+                <td>Phone</td>
+                <td><i class="fas fa-link"></i>
+                </td>
+            </tr>
+         </thead>
+         <tbody id="myTable"></tbody>
+     </table>    
+ </div> 
+ <script>
+        function addFilter(){
+                    var value = $("#fil").val().toLowerCase();
+                    $("#myTable tr").filter(function(){
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1)
+                    });
+        }
+         </script>
+ </div>
+ <script src="index.js"></script> 
+<footer>Made by Sharol</footer>
+</body>
+</html>
