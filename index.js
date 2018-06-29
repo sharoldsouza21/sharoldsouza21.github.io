@@ -22,7 +22,6 @@ var docList = [
     var link = document.createElement("a");
     var linkText = document.createTextNode("View Doctor");
     link.appendChild(linkText);
-    link.setAttribute("onClick","viewDoctor(id)");
     link.setAttribute("href","viewDoctor.html?id="+i);
     link.setAttribute("id",i);
     link.setAttribute("class","view");
@@ -32,7 +31,3 @@ var docList = [
    
   }
   
-  function viewDoctor(id){
-    console.log(id);
-   document.getElementsByTagName("body").innerHTML= docList[i];
-  }

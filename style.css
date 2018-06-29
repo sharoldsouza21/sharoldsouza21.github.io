@@ -1,5 +1,5 @@
 .about{
-    padding: 7%;
+    padding: 5%;
     background-color:dodgerblue;
     color: white;
     font-weight: bold;
@@ -61,7 +61,7 @@ thead>tr{
     font-size: 14px;
     color: #00ad5f;
     line-height: 1.4;
-    text-transform: uppercase;
+   text-transform: uppercase;
     background-color: #393939;
     text-align: center;
 }
@@ -70,4 +70,37 @@ thead>tr>td{
 }
 table{
     border-radius: 5%;
+}
+#docInfo{
+    padding:2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 50%;
+    margin: auto;
+    font-family: arial;
+    overflow: hidden;
+}
+.docImg{
+    float:right;
+    max-height:20%; 
+    object-fit: contain;
+}
+h1.docName{
+    text-align:center;
+    margin-bottom:2%;
+    background-color: #222222;
+    color:whitesmoke;
+}
+#rDoc{
+    background-color:#ebebe0;
+    padding:1% 2%;
+    margin:2%;
+    display: inline-block;
+    box-shadow: 3px 5px #888888;
+}
+#rDoc>p{
+  padding:1%;
+  color:black !important;
+}
+#relDoc{
+    margin-left:2%;
 }
