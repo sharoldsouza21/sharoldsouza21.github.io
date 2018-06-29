@@ -29,7 +29,7 @@ To calculate similarity between a selected doctor record, a score was used.Assig
 
 <h2>Notes:</h2>
 Filtering records and sorting was done using js library from <a>https://datatables.net/</a></div>
-<br/>Multi column tool to find records on speciality and city
+<br/>Realated doctors caluclated with similarity score
 
 <h2>Future Improvements</h2>
 The data is stored in a Javascript array.XML files could handle data for javascript to process.<br/>
