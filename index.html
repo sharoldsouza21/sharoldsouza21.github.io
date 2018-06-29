@@ -26,11 +26,6 @@
        <br/>
        <p>Sed mattis libero nibh, eget interdum quam vestibulum vel. Cras arcu enim, efficitur a lacus at, aliquam cursus purus. Praesent leo odio, pulvinar ut auctor ut, varius eget risus. Nam posuere metus nunc, vel bibendum metus scelerisque ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis tempor elit felis, et tempor nibh fringilla sed. Suspendisse tristique vehicula ex, id mattis urna iaculis id. Donec ut bibendum felis. Integer gravida sodales rutrum. Aliquam vehicula accumsan mattis. Etiam eget ex nulla. Nunc odio enim, fringilla eget euismod sed, elem</p>
     </div>
-<div class = "search-tools">
-        <table width="100%" border="0" align="center">
-                <tr id="td-block"><td style="width: 24%;" align="right">Speciality </td><td style="width: 76%;"><input type="text" id="search-val-spec" class="input-textbox" placeholder="Doctor Speciality"/></td></tr>
-                <tr id="td-block"><td align="right">City</td><td><input type="text" id="search-val-city" class="input-textbox" placeholder="City" list="City"/></td></tr>
-        </table>
 
 </div>
  <div class="search-list">          
@@ -56,46 +51,11 @@
  
  </div>
  <script src="index.js"></script> 
- <script>
-       $(document).ready( function () {
-            $('#tab').DataTable();
-
-            $('#search-val-spec, #search-val-city').keyup(function() {
-                    checkAll();
-            });
-
-
-             function countRows(){
-                $('#myTable tr').each(function(i, item) {
-      		$(this).find('td:eq(0)').prepend('<span class="counted">'+ (i+1) + '.) ')
-             });
-            }
-
-
-            function checkAll() {
-      
-      $('#myTable tr').each(function(i, item) {
-          if (
-                // 1.) check for text match...
-              $(this).find('td:eq(1)').text().toLowerCase().indexOf($('#search-val-spec').val().toLowerCase()) >= 0 &&
-                // 2.) check for text match...
-            $(this).find('td:eq(2)').text().toLowerCase().indexOf($('#search-val-city').val().toLowerCase()) >= 0
-          ) {
-              $(this).show();
-          } else {
-              $(this).hide();
-          };
-      });
-    
-        // REMOVE AND ADD AGAIN...
-        $('.counted').remove();
-        countRows();
-  };
- 
-  checkAll();
-        } );
- </script>
-
+<script>
+    $(document).ready( function () {
+    $('#tab').DataTable();
+    });
+</script>
 <footer>This is a demo website</footer>
 </body>
 </html>

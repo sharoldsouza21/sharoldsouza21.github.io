@@ -101,6 +101,7 @@ table{
     object-fit: contain;
     margin:auto;
     max-width: 60%;
+    max-height: 10%;
 }
 @media only screen and (max-width: 1200px) {
     .docImg {
