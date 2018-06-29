@@ -82,6 +82,9 @@ thead>tr{
 thead>tr>td{
     padding:1%;
 }
+.tab{
+    max-width: 100%;
+}
 table{
     border-radius: 5%;
 }
@@ -138,4 +141,10 @@ h1.docName{
     margin-left: 2%;
     font-size:18px;
     margin-bottom:2px !important;
+}
+#td-block{
+    display:inline-block;
+    margin-top:2%;
+    margin-left:20%;
+
 }
