@@ -2,7 +2,9 @@ var docList = [
     {name:"Ann Maria",img:"img.jpg",speciality:"General Practice",location:"San Diego",state:"California",address:"134370 BURBANK BLVD SUITETARZANA, CA 91356",phone:"(818)345-7707"},
     {name:"Joseph Bell",img:"img.jpg",speciality:"Pediatrics",location:"San Francisco",state:"California",address:"11550 INDIAN HILLS ROAD, SUITE # 371 MISSION HILLS, CA 91345 ",phone:"(818) 365-1194"},
     {name:"Noah Terry",img:"img.jpg",speciality:"General Practice",location:"Long Beach",state:"California",address:"27420 TOURNEY ROAD, SUITE # 200 VALENCIA, CA 91355",phone:"(661) 753-9891"},
+    {name:"Ang Oakley",img:"img.jpg",speciality:"Accupuncture",location:"Long Beach ",state:"California",address:"3100 E FLORENCE AVE, SUITE # 1 HUNTINGTON PARK, CA 90255",phone:"(323) 583-4115"},
     {name:"Angela Oakley",img:"img.jpg",speciality:"Dentist",location:"LongBeach ",state:"California",address:"3100 E FLORENCE AVE, SUITE # 1 HUNTINGTON PARK, CA 90255",phone:"(323) 583-4115"}
+
 ]
 var priority = {name:"1",img:"1",speciality:"40",location:"30",state:"20",address:"1",phone:"1"};
 var x = document.URL;
@@ -29,7 +31,7 @@ for(var index in docList[i]){
         docInfo.appendChild(imgNode);
     }
     else{
-        var nameText = document.createTextNode(docList[i][index]);
+        var nameText = document.createTextNode(index.charAt(0).toUpperCase()+index.substr(1)+": "+docList[i][index]);
         var nameNode = document.createElement("p");
         nameNode.appendChild(nameText);
         nameNode.setAttribute("class","info");

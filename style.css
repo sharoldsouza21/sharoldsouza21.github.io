@@ -7,6 +7,17 @@
 .search-list{
     padding:2% 10%;
 }
+#a-back{
+    font-size:20px;
+    display:inline-block;
+    background-color:#343a40;
+    margin:2%;
+    padding:10px;
+}
+#a-back:hover{
+    color:white;
+    text-decoration: none;
+}
 footer{
     padding: 1%;
     left: 0;
@@ -24,17 +35,20 @@ footer{
     font-weight: bold;
 }
 .filtnsearch{
-    padding:7%;
+    padding:3%;
 }
 #filterList{
     margin-top:3%;
     list-style-type: none;
    
 }
+.col-sm-2{
+    padding:0 !important;
+}
 #filterList>li,.cl{
  text-decoration:none;
  color:#fff;
- background-color: #17a2b8;
+ background: linear-gradient(to right, #3a7fd5, #6ebce2);
  border-radius: 5%;
  padding:10px 20px 10px 10px;
  margin-left: 5px;
@@ -50,7 +64,7 @@ footer{
     font-family: Lato-Regular;
     font-size: 15px;
     line-height: 1.4;
-    padding:10px;
+    padding:2%;
     background-color: #222222;
     margin:2%;
     color:#808080;
@@ -74,16 +88,30 @@ table{
 #docInfo{
     padding:2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 50%;
+    max-width: 70%;
     margin: auto;
     font-family: arial;
     overflow: hidden;
 }
 .docImg{
     float:right;
-    max-height:20%; 
     object-fit: contain;
+    margin:auto;
+    max-width: 60%;
 }
+@media only screen and (max-width: 1200px) {
+    .docImg {
+        width:100%;
+        height:50%;
+    }
+    #docInfo{
+        max-width: 70%;
+        padding:1%;
+        margin: auto;
+        font-family: arial;
+    }
+}
+
 h1.docName{
     text-align:center;
     margin-bottom:2%;
@@ -103,4 +131,11 @@ h1.docName{
 }
 #relDoc{
     margin-left:2%;
+}
+.info{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 2%;
+    font-size:18px;
+    margin-bottom:2px !important;
 }
